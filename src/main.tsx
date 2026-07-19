@@ -39,6 +39,7 @@ createRoot(document.getElementById("root")!).render(
           <GristStatusChip />
           <GristBoundary
             gate={GRIST_OPTIONS.columns?.length ? "canRender" : "ready"}
+            unavailableGraceMs={4000}
           >
             <div className="min-h-full w-full bg-background text-foreground">
               <GristSdkAlerts>
